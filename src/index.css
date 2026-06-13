@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-blue: #2563eb;
+  --color-secondary-green: #10b981;
+  --color-medical-bg: #f8fafc;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar and utility classes */
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Base custom definitions */
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Bouncing animations for typing dots */
+@keyframes bounce-dots {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-typing-dot-1 {
+  animation: bounce-dots 1.2s infinite ease-in-out;
+  animation-delay: 0ms;
+}
+.animate-typing-dot-2 {
+  animation: bounce-dots 1.2s infinite ease-in-out;
+  animation-delay: 150ms;
+}
+.animate-typing-dot-3 {
+  animation: bounce-dots 1.2s infinite ease-in-out;
+  animation-delay: 300ms;
+}
